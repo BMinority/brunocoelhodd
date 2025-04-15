@@ -1,0 +1,97 @@
+@import url('../../App.css');
+
+.bc-contact-container {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bc-contact-content {
+    text-align: center;
+    max-width: 600px;
+    padding: 30px;
+    background-color: var(--color-secondary);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bc-contact-title {
+    font-size: 2.5rem;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.bc-contact-description {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.bc-contact-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #25D366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.bc-contact-button:hover {
+    background-color: #128C7E;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .bc-contact-container {
+        padding: 30px 15px;
+    }
+
+    .bc-contact-content {
+        padding: 20px;
+    }
+
+    .bc-contact-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .bc-contact-description {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .bc-contact-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 480px) {
+    .bc-contact-container {
+        padding: 20px 10px;
+    }
+
+    .bc-contact-content {
+        padding: 15px;
+    }
+
+    .bc-contact-title {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .bc-contact-description {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .bc-contact-button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,128 @@
+/* Responsividade para telas até 1024px (tablets e notebooks pequenos) */
+@media screen and (max-width: 1024px) {
+    .bc-home-skills ul {
+        gap: 0.5rem;
+    }
+
+    .bc-home-skills ul li p {
+        font-size: 0.7rem;
+    }
+}
+
+/* Responsividade para telas até 768px (tablets em modo retrato e celulares grandes) */
+@media screen and (max-width: 840px) {
+
+    .bc-home-header .bc-home-content img {
+        width: 30vw;
+    }
+
+    .bc-home-projects .bc-home-projects-img {
+        gap: 1rem;
+    }
+
+    .bc-home-projects #macbook-img {
+        width: 30vw;
+    }
+
+    .bc-home-projects #iphone-img {
+        width: 8vw;
+    }
+
+    .bc-home-projects #ipad-img {
+        width: 12vw;
+    }
+
+    .bc-home-skills ul {
+        gap: 0.5rem;
+    }
+
+    .bc-home-skills ul li svg {
+        width: 6vw;
+    }
+}
+
+/* Responsividade para telas até 480px (celulares menores) */
+@media screen and (max-width: 480px) {
+    .bc-home-container {
+        padding: 1rem;
+    }
+
+    .bc-home-container h1,
+    .bc-home-container p {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .bc-home-container h1 {
+        font-size: 1.2rem;
+    }
+
+    .bc-home-container p {
+        font-size: 0.9rem;
+    }
+
+    .bc-home-container .bc-home-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .bc-home-content {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bc-home-header .bc-home-content img {
+        width: 50vw;
+        margin-bottom: 1rem;
+    }
+
+    .bc-home-header {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .bc-home-header div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .bc-home-projects .bc-home-projects-img {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: end;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .bc-home-projects #macbook-img {
+        width: 80vw;
+    }
+
+    .bc-home-projects #iphone-img {
+        width: 18vw;
+    }
+
+    .bc-home-projects #ipad-img {
+        width: 30vw;
+    }
+
+    .bc-home-skills ul {
+        gap: 0.3rem;
+    }
+
+    .bc-home-skills ul li svg {
+        width: 8vw;
+    }
+
+    .bc-home-skills ul li {
+        padding: 0;
+    }
+
+    .bc-home-skills ul li p {
+        display: none;
+    }
+}

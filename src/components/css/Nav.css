@@ -1,0 +1,107 @@
+@import url('../../App.css');
+
+.bc-nav-container {
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+.bc-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bc-nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.bc-nav-logo img {
+    height: 3rem;
+    margin-right: 10px;
+}
+
+.bc-logo-text {
+    margin: 0;
+}
+
+.bc-nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.bc-nav-links li {
+    margin-left: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.bc-nav-links li:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.bc-nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.bc-nav-toggle {
+    display: none;
+    /* Esconde os ícones em telas grandes */
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.bc-nav-toggle i {
+    margin-left: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Estilos para telas menores (ex: tablets e celulares) */
+@media (max-width: 768px) {
+    .bc-nav-links {
+        display: none;
+        /* Esconde os links em telas pequenas inicialmente */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        /* Ajuste conforme a altura do seu menu */
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        z-index: 10;
+        /* Garante que o menu móvel fique acima de outros elementos */
+        transform: translateY(-100%);
+        /* Inicia o menu escondido fora da tela */
+        transition: transform 0.3s ease-in-out;
+        /* Adiciona uma transição suave */
+    }
+
+    .bc-nav-links.active {
+        display: flex;
+        /* Mostra os links quando a classe 'active' é adicionada */
+        transform: translateY(0);
+        /* Move o menu para dentro da tela */
+    }
+
+    .bc-nav-links li {
+        margin: 1rem 0;
+    }
+
+    .bc-nav-toggle {
+        display: block;
+        /* Mostra os ícones de menu em telas pequenas */
+    }
+}
