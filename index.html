@@ -1,17 +1,104 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/src/assets/logo_branco_bcoelho.svg" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Bruno Coelho | Desenvolvedor Web & Designer Gráfico</title>
+  <meta name="description"
+    content="Portfólio de Bruno Coelho — Desenvolvedor Full-Stack e Designer Gráfico. Confira meus projetos e entre em contato!" />
+  <meta name="keywords"
+    content="Bruno Coelho, portfólio, desenvolvedor web, designer gráfico, projetos, front-end, full-stack, javascript, react, design" />
+  <meta name="author" content="Bruno Coelho" />
+
+  <meta property="og:title" content="Bruno Coelho | Desenvolvedor Web & Designer Gráfico" />
+  <meta property="og:description" content="Veja meu portfólio, projetos e entre em contato!" />
+  <meta property="og:image" content="https://brunocoelhodd.vercel.app/capa.png" />
+  <meta property="og:url" content="https://brunocoelhodd.vercel.app/" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bruno Coelho | Desenvolvedor Web & Designer Gráfico" />
+  <meta name="twitter:description" content="Veja meu portfólio, projetos e entre em contato!" />
+  <meta name="twitter:image" content="https://brunocoelhodd.vercel.app/capa.png" />
+
+  <link rel="icon" type="image/svg+xml" href="/src/assets/logo_branco_bcoelho.svg" />
   <script src="https://kit.fontawesome.com/0a60265145.js" crossorigin="anonymous"></script>
-  <title>Bruno Coelho</title>
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="loader">
+    <div class="spinner"></div>
+    <p class="loader-text">Carregando ...</p>
+  </div>
+
+  <div id="root" style="display: none;"></div>
+
   <script type="module" src="/src/main.jsx"></script>
+
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #1d1d1d;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #loader {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #1d1d1d;
+      color: #ffffff;
+    }
+
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 6px solid #fff;
+      border-top: 6px solid #1d72b8;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    .loader-text {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const root = document.getElementById('root');
+      const loader = document.getElementById('loader');
+
+      if (root) {
+        const observer = new MutationObserver(() => {
+          root.style.display = 'block';
+          loader.style.display = 'none';
+        });
+
+        observer.observe(root, { childList: true });
+      }
+    });
+  </script>
 </body>
 
 </html>
