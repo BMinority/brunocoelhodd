@@ -19,6 +19,7 @@ function Nav() {
                 <ul className={`bc-nav-links ${menuOpen ? 'bc-nav-links-mobile active' : ''}`}>
                     <li><a href="#home" onClick={() => setMenuOpen(false)}>Início</a></li>
                     <li><a href="#galery" onClick={() => setMenuOpen(false)}>Galeria</a></li>
+                    <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projetos</a></li>
                     <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contato</a></li>
                 </ul>
                 <div className='bc-nav-toggle' onClick={toggleMenu}>
