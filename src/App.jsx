@@ -17,11 +17,13 @@ function App() {
     <>
       <header>
         <Nav />
+      </header>
+      <main>
         <Home />
         <FlyersGalery />
         <Projects />
         <Contact />
-      </header>
+      </main>
       <footer>
         <p>
           <p>&copy; {currentYear} Bruno Coelho. Todos os direitos reservados.</p>

@@ -17,6 +17,8 @@
 .bc-nav-logo {
     display: flex;
     align-items: center;
+    color: var(--color-text);
+    text-decoration: none;
 }
 
 .bc-nav-logo img {
