@@ -7,6 +7,7 @@ import Home from './components/jsx/Home'
 import FlyersGalery from './components/jsx/FlyersGalery'
 import Contact from './components/jsx/Contact'
 import Projects from './components/jsx/Projects'
+import WhatsAppButton from './components/jsx/WhatsAppButton'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <>
+      <WhatsAppButton />
       <header>
         <Nav />
       </header>
