@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../css/Nav.css';
-import Logo from "../../assets/logo_branco_bcoelho.svg";
 import ImgPerfil from "../../assets/perfil/foto-de-perfil.png";
 
 
