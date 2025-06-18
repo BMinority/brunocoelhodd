@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../css/Nav.css';
 import ImgPerfil from "../../assets/perfil/foto-de-perfil.png";
+import Social from './Social';
 
 
 function Nav({ onNavigate }) {
@@ -38,6 +39,8 @@ function Nav({ onNavigate }) {
                         <li onClick={() => handleNavigation('projects')}>Projetos</li>
                         <li onClick={() => handleNavigation('contact')}>Contato</li>
                     </ul>
+
+                    <Social />
                 </nav>
             </aside>
         </>
