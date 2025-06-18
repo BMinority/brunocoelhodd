@@ -3,44 +3,49 @@
 .bc-nav-container {
     background-color: #333;
     color: white;
-    padding: 1rem 2rem;
+    width: 250px;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    transition: transform 0.3s ease-in-out;
 }
 
 .bc-nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    flex-direction: column;
+    align-items: start;
+    padding: 2rem 1rem;
 }
 
-.bc-nav-logo {
+.bc-nav-user {
     display: flex;
     align-items: center;
-    color: var(--color-text);
-    text-decoration: none;
+    margin-bottom: 2rem;
 }
 
-.bc-nav-logo img {
-    height: 3rem;
+.bc-nav-user img {
+    height: 4rem;
+    border-radius: 50%;
     margin-right: 10px;
 }
 
-.bc-logo-text {
+.bc-nav-user h1 {
+    font-size: 0.8rem;
     margin: 0;
 }
 
 .bc-nav-links {
     list-style: none;
-    display: flex;
-    margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .bc-nav-links li {
-    margin-left: 20px;
-    padding: 10px 15px;
+    padding: 1rem;
     cursor: pointer;
+    width: 100%;
 }
 
 .bc-nav-links li:hover {
@@ -48,62 +53,34 @@
     border-radius: 5px;
 }
 
-.bc-nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
 .bc-nav-toggle {
-    display: none;
-    /* Esconde os ícones em telas grandes */
+    position: fixed;
+    bottom: 5.5rem;
+    right: 1.7rem;
+
     font-size: 1.5rem;
+
+    background-color: #333;
+    color: #fff;
+
+    padding: 0.5rem;
+    border-radius: 5px;
+
     cursor: pointer;
+    z-index: 2000;
+    display: none;
 }
 
-.bc-nav-toggle i {
-    margin-left: 10px;
-}
-
-.hidden {
-    display: none !important;
-}
-
-/* Estilos para telas menores (ex: tablets e celulares) */
 @media (max-width: 768px) {
-    .bc-nav-links {
-        display: none;
-        /* Esconde os links em telas pequenas inicialmente */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        /* Ajuste conforme a altura do seu menu */
-        left: 0;
-        background-color: #333;
-        width: 100%;
-        text-align: center;
-        padding: 1rem 0;
-        z-index: 10;
-        /* Garante que o menu móvel fique acima de outros elementos */
-        transform: translateY(-100%);
-        /* Inicia o menu escondido fora da tela */
-        transition: transform 0.3s ease-in-out;
-        /* Adiciona uma transição suave */
+    .bc-nav-container {
+        transform: translateX(-100%);
     }
 
-    .bc-nav-links.active {
-        display: flex;
-        /* Mostra os links quando a classe 'active' é adicionada */
-        transform: translateY(0);
-        /* Move o menu para dentro da tela */
-    }
-
-    .bc-nav-links li {
-        margin: 1rem 0;
+    .bc-nav-container.open {
+        transform: translateX(0);
     }
 
     .bc-nav-toggle {
         display: block;
-        /* Mostra os ícones de menu em telas pequenas */
     }
 }

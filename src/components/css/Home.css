@@ -13,71 +13,36 @@
 
 .bc-home-container h1,
 .bc-home-container p {
-    max-width: 30vw;
-    margin-bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
 }
 
 .bc-home-container h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .bc-home-container p {
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 .bc-home-container a {
     text-decoration: none;
 }
 
-.bc-home-container .bc-home-button {
-    display: inline-block;
-    padding: 1vw 2vw;
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    color: var(--color-text);
-    background-color: var(--color-background);
-    color: var(--color-primary);
-    border: 1px solid var(--color-border);
-    border-radius: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.bc-home-container .bc-home-button:hover {
-    background-color: var(--color-secondary);
-    color: var(--color-text);
-    border: 1px solid var(--color-text);
-}
-
 .bc-home-header {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-}
 
-.bc-home-header .bc-home-content img {
-    width: 20vw;
-    height: auto;
-
-    border-radius: 14px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.432);
+    gap: 1.2rem;
 }
 
 .bc-home-header div {
-    flex: 1;
     width: 100%;
 }
 
-.bc-home-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-/*projects*/
 
 .bc-home-projects {
     display: flex;
@@ -114,19 +79,6 @@
 
 .bc-home-projects #ipad-img {
     width: 13vw;
-}
-
-.bc-home-projects div p {
-    text-align: center;
-    font-size: 1rem;
-    max-width: 100%;
-}
-
-.bc-home-projects-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
 }
 
 

@@ -5,15 +5,3 @@
     --color-text: #ffffff;
     --color-border: #e0e0e0;
 }
-
-footer {
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    padding: 0.5rem;
-    text-align: center;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.8rem;
-}

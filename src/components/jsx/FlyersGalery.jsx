@@ -1,4 +1,3 @@
-import React from 'react';
 import '../css/FlyersGalery.css';
 
 import BemViverImg01 from "../../assets/works/bemviver-Página 1.png";

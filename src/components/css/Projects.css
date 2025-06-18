@@ -11,25 +11,16 @@
     margin-bottom: 2rem;
 }
 
-.bc-project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+.bc-project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .bc-project-card {
-    background-color: #fff;
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.bc-project-card:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    transform: translateY(-4px);
+    flex-direction: row;
 }
 
 .bc-project-image-link {
@@ -37,41 +28,64 @@
 }
 
 .bc-project-thumb {
-    width: 100%;
-    height: auto;
+    width: 20rem;
+    height: 15rem;
     object-fit: cover;
+    object-position: center;
     aspect-ratio: 16 / 9;
-    border-bottom: 1px solid var(--color-border);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
 }
 
 .bc-project-info {
     padding: 1rem;
-    font-size: 0.95rem;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 
-    color: var(--color-primary);
+    color: var(--color-text);
 }
 
 .bc-project-info h3 {
     margin: 0 0 0.3rem 0;
-    font-size: 1.3rem;
-    color: var(--color-primary);
+    font-size: 1.5rem;
+    color: var(--color-text);
 }
 
 .bc-project-descricao {
-    color: var(--color-secondary);
+    color: var(--color-border);
 }
 
 .bc-project-link {
     margin-top: auto;
     font-weight: bold;
-    color: #1d72b8;
+    font-size: 1rem;
+    color: #62b9ff;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .bc-project-link:hover {
-    color: #155a8a;
+    color: #2ba7ff;
+}
+
+@media (max-width: 768px) {
+    .bc-project-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bc-project-image-link {
+        margin-bottom: 1rem;
+    }
+
+    .bc-project-thumb {
+        width: 100%;
+        height: auto;
+    }
+
+    .bc-project-info {
+        text-align: center;
+    }
 }

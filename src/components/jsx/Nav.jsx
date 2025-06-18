@@ -1,33 +1,47 @@
 import React, { useState } from 'react';
 import '../css/Nav.css';
 import Logo from "../../assets/logo_branco_bcoelho.svg";
+import ImgPerfil from "../../assets/perfil/foto-de-perfil.png";
 
-function Nav() {
+
+function Nav({ onNavigate }) {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
+    const handleNavigation = (section) => {
+        onNavigate(section);
+        setMenuOpen(false);
     };
 
     return (
-        <div className='bc-nav-container'>
-            <nav className='bc-nav'>
-                <a href="#home" className='bc-nav-logo'>
-                    <img src={Logo} alt="Logo" />
-                    <h1 className='bc-logo-text'>Bruno Coelho</h1>
-                </a>
-                <ul className={`bc-nav-links ${menuOpen ? 'bc-nav-links-mobile active' : ''}`}>
-                    <li><a href="#home" onClick={() => setMenuOpen(false)}>Início</a></li>
-                    <li><a href="#galery" onClick={() => setMenuOpen(false)}>Galeria</a></li>
-                    <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projetos</a></li>
-                    <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contato</a></li>
-                </ul>
-                <div className='bc-nav-toggle' onClick={toggleMenu}>
-                    <i className={`fa-solid fa-bars ${menuOpen ? 'hidden' : ''}`}></i>
-                    <i className={`fa-solid fa-xmark ${menuOpen ? '' : 'hidden'}`}></i>
-                </div>
-            </nav>
-        </div>
+        <>
+            <div className='bc-nav-toggle' onClick={() => setMenuOpen(!menuOpen)}>
+                <i className={`fa-solid ${menuOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
+            </div>
+            <aside className={`bc-nav-container ${menuOpen ? 'open' : ''}`}>
+
+                <nav className='bc-nav'>
+                    <div className='bc-nav-user'>
+                        <div className='bc-nav-user-image'>
+                            <img src={ImgPerfil} alt="Imagem de Bruno Coelho" />
+                        </div>
+                        <div className='bc-nav-title' id='bc-nav-title'>
+                            <p>Bruno Coelho</p>
+                            <h1>Designer gráfico e
+                                Desenvolvedor web
+                            </h1>
+                        </div>
+
+                    </div>
+
+                    <ul className='bc-nav-links'>
+                        <li onClick={() => handleNavigation('home')}>Início</li>
+                        <li onClick={() => handleNavigation('galery')}>Galeria</li>
+                        <li onClick={() => handleNavigation('projects')}>Projetos</li>
+                        <li onClick={() => handleNavigation('contact')}>Contato</li>
+                    </ul>
+                </nav>
+            </aside>
+        </>
     );
 }
 

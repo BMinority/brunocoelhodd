@@ -1,7 +1,6 @@
 .bc-contact-container {
     padding: 2rem;
-    background-color: var(--color-background);
-    color: var(--color-primary);
+    color: var(--color-text);
 }
 
 .bc-contact-content {
@@ -18,7 +17,7 @@
 .bc-contact-description {
     font-size: 1rem;
     margin-bottom: 2rem;
-    color: var(--color-secondary);
+    color: var(--color-border);
 }
 
 .bc-contact-form {

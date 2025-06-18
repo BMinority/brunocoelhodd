@@ -59,7 +59,7 @@ function Projects() {
     return (
         <section className="bc-project-container" id='projects'>
             <h2 className="bc-project-title">Projetos de Destaque</h2>
-            <div className="bc-project-grid">
+            <div className="bc-project-content">
                 {projetos.map((projeto, index) => (
                     <div className="bc-project-card" key={index}>
                         <a
