@@ -17,7 +17,7 @@ function Home() {
                     Sou um desenvolvedor web e designer gráfico apaixonado por criar experiências visuais impactantes.
                 </p>
                 <p>
-                    Meu foco criar projetos com designer pensado para aumentar a conversão de vendas e melhorar a experiência do usuário.
+                    Meu foco está em criar projetos com designer pensado para aumentar a conversão de vendas e melhorar a experiência do usuário.
                 </p>
 
                 <div className='bc-home-projects-container'>
