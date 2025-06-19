@@ -10,12 +10,12 @@ function Home() {
         <section className='bc-home-container'
             id='home'>
             <header className='bc-home-header'>
-                <h1>
-                    Olá! Bem-vindo ao meu site!
-                </h1>
-                <p>
-                    Meu foco está em criar projetos com designer pensado para aumentar a conversão de vendas e melhorar a experiência do usuário.
-                </p>
+                <div className='bc-home-tittle'>
+                    <h1>Bem-vindo!</h1>
+                    <p>
+                        Sou especialista em design e desenvolvimento com foco em performance, conversão e usabilidade.
+                    </p>
+                </div>
 
                 <div className='bc-home-projects-container'>
                     <div className='bc-home-projects'>
