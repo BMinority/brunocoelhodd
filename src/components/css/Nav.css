@@ -95,16 +95,20 @@
 .bc-nav-toggle {
     position: fixed;
     bottom: 5.5rem;
-    right: 1.7rem;
+    right: 1.5rem;
     z-index: 2000;
 
     padding: 0.5rem;
     font-size: 1.5rem;
+    text-align: center;
 
-    background-color: #333;
-    color: #fff;
+    background-color: #33333363;
+    color: #ffffffc0;
 
-    border-radius: 5px;
+    border-radius: 50%;
+    border: 1px solid #ffffffc0;
+    width: 3rem;
+    height: 3rem;
     cursor: pointer;
 
     display: none;
