@@ -2,90 +2,125 @@
 
 .bc-project-container {
     padding: 2rem;
-    color: var(--color-text);
+    color: var(--color-primary);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .bc-project-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+
+    color: var(--color-text);
 }
 
 .bc-project-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
 }
 
+/* Card */
 .bc-project-card {
-    overflow: hidden;
     display: flex;
     flex-direction: row;
+    gap: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.315);
 }
 
+/* Imagem */
 .bc-project-image-link {
+    flex-shrink: 0;
     display: block;
 }
 
 .bc-project-thumb {
-    width: 20rem;
-    height: 15rem;
-    object-fit: cover;
-    object-position: center;
+    width: 300px;
+    height: auto;
     aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 12px;
     border: 1px solid var(--color-border);
-    border-radius: 14px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.637);
 }
 
+/* Informações */
 .bc-project-info {
-    padding: 1rem;
-    font-size: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-
-    color: var(--color-text);
+    justify-content: space-between;
+    gap: 0.75rem;
+    font-size: 1rem;
+    flex: 1;
 }
 
 .bc-project-info h3 {
-    margin: 0 0 0.3rem 0;
-    font-size: 1.5rem;
-    color: var(--color-text);
+    margin: 0;
+    font-size: 1.6rem;
+    color: var(--color-primary);
 }
 
 .bc-project-descricao {
-    color: var(--color-border);
+    color: var(--color-secondary);
+    font-size: 1rem;
 }
 
 .bc-project-link {
-    margin-top: auto;
+    align-self: flex-start;
+    margin-top: 1rem;
+    padding: 0.5rem;
     font-weight: bold;
     font-size: 1rem;
-    color: #62b9ff;
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    border-radius: 14px;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .bc-project-link:hover {
-    color: #2ba7ff;
+    color: #69c1ff;
 }
 
+/* Responsivo - Tablet */
+@media (max-width: 1024px) {
+    .bc-project-thumb {
+        width: 250px;
+    }
+
+    .bc-project-card {
+        padding: 1rem;
+        gap: 1rem;
+    }
+}
+
+/* Responsivo - Mobile */
 @media (max-width: 768px) {
+    .bc-project-content {
+        grid-template-columns: 1fr;
+    }
+
     .bc-project-card {
         flex-direction: column;
         align-items: center;
-    }
-
-    .bc-project-image-link {
-        margin-bottom: 1rem;
+        text-align: center;
     }
 
     .bc-project-thumb {
         width: 100%;
-        height: auto;
+        max-width: 100%;
     }
 
     .bc-project-info {
-        text-align: center;
+        align-items: center;
+    }
+
+    .bc-project-link {
+        align-self: center;
     }
 }
