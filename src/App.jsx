@@ -6,6 +6,7 @@ import FlyersGalery from './components/jsx/FlyersGalery'
 import Contact from './components/jsx/Contact'
 import Projects from './components/jsx/Projects'
 import WhatsAppButton from './components/jsx/WhatsAppButton'
+import Experience from './components/jsx/Experience'
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -18,6 +19,8 @@ function App() {
         return <Projects />;
       case 'contact':
         return <Contact />;
+      case 'experience':
+        return <Experience />;
       case 'home':
       default:
         return <Home />;

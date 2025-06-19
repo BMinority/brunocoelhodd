@@ -55,6 +55,11 @@ function Nav({ onNavigate }) {
                     </ul>
 
                     <Social />
+
+                    <button className='bc-experience-view'
+                        onClick={() => handleNavigation('experience')}>
+                        Experiência profissional
+                    </button>
                 </nav>
             </aside>
         </>
