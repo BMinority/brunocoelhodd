@@ -150,3 +150,11 @@ nav button:hover {
         display: block;
     }
 }
+
+@media (max-width: 320px) {
+
+    .bc-nav-container {
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
