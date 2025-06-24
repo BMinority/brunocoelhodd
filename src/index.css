@@ -1,12 +1,4 @@
 @import url('./App.css');
-
-:root {
-  line-height: 1.5;
-  font-weight: 400;
-  background-color: var(--color-primary);
-  color: #fff;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,6 +11,8 @@ html {
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--color-text);
+  background-color: #1d1d1d;
 }
 
 a {
