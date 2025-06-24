@@ -6,6 +6,8 @@ import CPJWImg from '../../assets/screenshots/controleDePublicacoes.png'
 import InterarteImg from '../../assets/screenshots/interarte.png'
 import PostoCidadeImg from '../../assets/screenshots/postoCidade.png'
 import PedeJaImg from '../../assets/screenshots/pedeJa.png'
+import CatchApiImg from '../../assets/screenshots/catchapi.png'
+import NexusImg from '../../assets/screenshots/nexusmarvel.png'
 
 const projetos = [
     {
@@ -25,6 +27,24 @@ const projetos = [
         tecnologias: ['React', 'CSS', 'JavaScript', 'PDFjs'],
         statusAtual: 'Em uso.',
         imagem: CPJWImg,
+    },
+        {
+        nome: 'Marvel NEXUS',
+        url: 'https://nexusmarvel.netlify.app/',
+        descricao: 'Projeto de estudo com consumo de API Rest oficial da Marvel Comics.',
+        tipo: 'Projeto de estudo.',
+        tecnologias: ['React', 'Vite', 'TypeScript', 'Sass', 'API Rest'],
+        statusAtual: 'Ativo.',
+        imagem: NexusImg,
+    },
+        {
+        nome: 'Catch API',
+        url: 'https://catchapi.netlify.app/',
+        descricao: 'Projeto de estudo com consumo de API Rest da PokeAPI.',
+        tipo: 'Projeto de estudo',
+        tecnologias: ['React', 'Vite', 'Sass', 'API Rest'],
+        statusAtual: 'Ativo.',
+        imagem: CatchApiImg,
     },
     {
         nome: 'Interarte Info',
