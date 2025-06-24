@@ -93,8 +93,8 @@
     }
 
     .bc-home-projects .bc-home-projects-img {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        align-items:baseline;
         gap: 1rem;
     }
 
@@ -103,11 +103,11 @@
     }
 
     .bc-home-projects #ipad-img {
-        width: 60vw;
+        width: 40vw;
     }
 
     .bc-home-projects #iphone-img {
-        width: 40vw;
+        width: 25vw;
     }
 
     .bc-home-skills ul {
@@ -116,8 +116,8 @@
         justify-content: center;
     }
 
-    .bc-home-skills ul li svg {
-        width: 40px;
+    .bc-home-skills ul li img {
+        width: auto;
     }
 
     .bc-home-skills ul li p {
