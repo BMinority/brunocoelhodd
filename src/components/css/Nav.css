@@ -41,6 +41,7 @@
 .bc-nav-user img {
     height: 4rem;
     border-radius: 50%;
+    border: 2px solid var(--color-text);
     margin-right: 10px;
 }
 
